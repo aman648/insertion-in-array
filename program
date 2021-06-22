@@ -1,0 +1,33 @@
+#include<iostream.h>
+
+
+
+using namespace std;
+void insert(int arr[],int item,int n){
+    int pos,i,j,k;
+    for(i=0;i<=n;i++){
+        if(arr[i]>=item){
+            pos=i;
+            break;
+        }
+        
+    }
+    //n=n+1;
+    for(j=n-1;j>=pos;j--){
+        
+        arr[j+1]=arr[j];
+        arr[pos]=item;
+    }
+    for(k=0;k<=n;k++){
+        cout<<arr[k]<<endl;
+    }
+}
+
+int main()
+{
+    int arr[]={23,34,12,67,8};
+   insert(arr,14,5);
+   
+
+    return 0;
+}
